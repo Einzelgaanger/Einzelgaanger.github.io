@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to TransparentTrack</title>
+  <title>TransparentTrack</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
@@ -17,18 +17,7 @@
         <h1>TransparentTrack</h1>
         <p class="header-subtitle">Ensuring Transparency in Resource Allocation</p>
       </div>
-      <!-- Hamburger Menu for Mobile -->
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
-        <i class="fas fa-bars"></i>
-      </button>
-      <nav id="nav">
-        <ul>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="home.html" class="login-btn">Login</a></li>
-        </ul>
-      </nav>
+      <a href="home.html" class="login-btn">Login</a>
     </div>
   </header>
 
@@ -38,56 +27,7 @@
       <div class="hero-content">
         <h2>Empowering Transparency in Resource Distribution</h2>
         <p>TransparentTrack leverages cutting-edge technology to ensure accountability and eliminate corruption in resource allocation.</p>
-        <a href="#features" class="cta-btn">Explore Features</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features" class="features">
-    <div class="container">
-      <h2>Key Features</h2>
-      <div class="feature-cards">
-        <div class="card">
-          <i class="fas fa-shield-alt"></i>
-          <h3>Secure Access</h3>
-          <p>Advanced encryption and secure authentication for your data.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-chart-line"></i>
-          <h3>Real-Time Analytics</h3>
-          <p>Track resource allocation and disbursement in real-time.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-users"></i>
-          <h3>User Management</h3>
-          <p>Easily manage roles and permissions for your team.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>TransparentTrack is a cutting-edge platform designed to ensure transparency and accountability in resource allocation. Our mission is to empower organizations with the tools they need to manage resources effectively and ethically.</p>
-      <div class="about-grid">
-        <div class="about-item">
-          <i class="fas fa-globe"></i>
-          <h3>Global Reach</h3>
-          <p>Supporting NGOs and governments worldwide.</p>
-        </div>
-        <div class="about-item">
-          <i class="fas fa-hand-holding-heart"></i>
-          <h3>Community Focus</h3>
-          <p>Designed for rural and underserved communities.</p>
-        </div>
-        <div class="about-item">
-          <i class="fas fa-lock"></i>
-          <h3>Secure & Reliable</h3>
-          <p>Built with blockchain and biometric security.</p>
-        </div>
+        <button class="cta-btn" onclick="toggleContactPopup()">Contact Us</button>
       </div>
     </div>
   </section>
@@ -100,9 +40,6 @@
       <form id="contactForm" action="https://formspree.io/f/mvojnqkj" method="POST">
         <div class="form-group">
           <input type="text" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Your Email" required>
         </div>
         <div class="form-group">
           <textarea name="message" placeholder="Your Message" required></textarea>
@@ -121,7 +58,6 @@
         <a href="https://x.com/beautymindke" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
         <a href="https://www.linkedin.com/in/a-beautiful-mind-ab461a341/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
       </div>
-      <button class="contact-btn" onclick="toggleContactPopup()" aria-label="Open contact form">Contact Us</button>
     </div>
   </footer>
 

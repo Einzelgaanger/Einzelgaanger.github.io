@@ -32,9 +32,10 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+}
+
+.header-content {
+  text-align: left; /* Align header content to the left */
 }
 
 header h1 {
@@ -61,6 +62,8 @@ header .header-subtitle {
   cursor: pointer;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem; /* Move login button below the header content */
+  display: inline-block; /* Ensure it stays inline */
 }
 
 .login-btn:hover {
@@ -74,7 +77,7 @@ header .header-subtitle {
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-  background: linear-gradient(135deg, #0000ff, #20cc00);
+  background: linear-gradient(135deg, #0000ff, #20cc00); /* Gradient */
   padding: 1rem;
   position: relative;
   overflow: hidden;
@@ -122,6 +125,121 @@ header .header-subtitle {
   transform: translateY(-2px);
 }
 
+/* Features Section */
+.features {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0000ff;
+  font-weight: 700;
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 calc(33.333% - 4rem);
+  max-width: calc(33.333% - 4rem);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card i {
+  font-size: 2.5rem;
+  color: #0000ff;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* About Section */
+.about {
+  padding: 4rem 0;
+  background: #f4f4f4;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0000ff;
+  font-weight: 700;
+}
+
+.about p {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about-item {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 calc(33.333% - 4rem);
+  max-width: calc(33.333% - 4rem);
+}
+
+.about-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-item i {
+  font-size: 2.5rem;
+  color: #0000ff;
+  margin-bottom: 1rem;
+}
+
+.about-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.about-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
 /* Contact Popup */
 .contact-popup {
   display: none;
@@ -143,7 +261,7 @@ header .header-subtitle {
 .contact-popup .contact-form {
   background: #ffffff;
   border-radius: 16px;
-  padding: 1.5rem;
+  padding: 2rem;
   max-width: 90%;
   width: 100%;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -151,14 +269,14 @@ header .header-subtitle {
 
 .contact-popup h2 {
   text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
   color: #0000ff;
   font-weight: 700;
 }
 
 .contact-popup .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-popup .form-group input,
@@ -192,7 +310,7 @@ header .header-subtitle {
 footer {
   background: #0000ff;
   color: #fff;
-  padding: 1.5rem;
+  padding: 2rem;
   text-align: center;
   margin-top: auto;
 }
@@ -204,7 +322,7 @@ footer .social-links {
 footer .social-links a {
   color: #fff;
   margin: 0 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 

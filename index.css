@@ -24,7 +24,7 @@ body {
 
 /* Header Styling */
 header {
-  background: #000000;
+  background:rgb(4, 0, 219);
   color: #fff;
   padding: 1rem;
   width: 100%;
@@ -53,7 +53,7 @@ header .header-subtitle {
 }
 
 .login-btn {
-  background: #20cc00;
+  background:rgb(0, 0, 0);
   color: #ffffff;
   padding: 0.5rem 1rem;
   border: none;
@@ -67,7 +67,7 @@ header .header-subtitle {
 }
 
 .login-btn:hover {
-  background: #20cc00;
+  background:rgb(138, 141, 64);
   transform: translateY(-2px);
 }
 
@@ -77,39 +77,25 @@ header .header-subtitle {
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-  background: linear-gradient(135deg, #20cc00, #0000ff);
-  padding: 1rem;
   position: relative;
   overflow: hidden;
-}
-
-.hero-content {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  max-width: 100%;
-  width: 100%;
   text-align: center;
-  backdrop-filter: blur(10px);
-  z-index: 1;
+  color: #fff;
 }
 
 .hero h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color:#0000ff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .hero p {
-  font-size: 1rem;
-  color: #000000;
-  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .hero .cta-btn {
-  background:#0000ff;
+  background: #0000ff;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -121,21 +107,22 @@ header .header-subtitle {
 }
 
 .hero .cta-btn:hover {
-  background: #990000;
+  background:rgb(71, 52, 52);
   transform: translateY(-2px);
 }
 
 /* Features Section */
 .features {
-  padding: 2rem 0;
-  background: #ffffff;
+  padding: 4rem 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
+  color: #fff;
 }
 
 .features h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #0000ff;
+  color: #ffffff;
   font-weight: 700;
 }
 
@@ -146,7 +133,7 @@ header .header-subtitle {
 }
 
 .card {
-  background: #f9f9f9;
+  background: rgb(255, 255, 255);
   border: 1px solid #ddd;
   border-radius: 16px;
   padding: 1.5rem;
@@ -160,15 +147,14 @@ header .header-subtitle {
 }
 
 .card i {
-  font-size: 2rem;
-  color: #0000ff;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 .card h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #000000;
 }
 
 .card p {
@@ -176,24 +162,62 @@ header .header-subtitle {
   color: #666;
 }
 
+/* Icon Colors */
+.icon-purple {
+  color: #800080; /* Purple */
+}
+
+.icon-orange {
+  color: #ffa500; /* Orange */
+}
+
+.icon-blue {
+  color: #0000ff; /* Blue */
+}
+
+.icon-green {
+  color: #008000; /* Green */
+}
+
+.icon-pink {
+  color: #ff1493; /* Pink */
+}
+
+.icon-red {
+  color: #ff0000; /* Red */
+}
+
+.icon-yellow {
+  color: #ffd700; /* Yellow */
+}
+
+.icon-teal {
+  color: #008080; /* Teal */
+}
+
+.icon-indigo {
+  color: #4b0082; /* Indigo */
+}
+
 /* About Section */
 .about {
-  padding: 2rem 0;
-  background: #f4f4f4;
+  padding: 4rem 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
+  color: #fff;
 }
 
 .about h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #0000ff;
+  color: #fff;
   font-weight: 700;
 }
 
 .about p {
   text-align: center;
   font-size: 1rem;
-  color: #333;
+  color: #fff;
   margin-bottom: 1.5rem;
 }
 
@@ -204,7 +228,7 @@ header .header-subtitle {
 }
 
 .about-item {
-  background: #ffffff;
+  background:  rgb(255, 255, 255);
   border: 1px solid #ddd;
   border-radius: 16px;
   padding: 1.5rem;
@@ -218,18 +242,68 @@ header .header-subtitle {
 }
 
 .about-item i {
-  font-size: 2rem;
-  color: #0000ff;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 .about-item h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #000000;
 }
 
 .about-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 4rem 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
+  color: #fff;
+}
+
+.gallery h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gallery-item {
+  background: rgb(255, 255, 255);
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.gallery-item p {
   font-size: 1rem;
   color: #666;
 }
@@ -300,27 +374,51 @@ header .header-subtitle {
   transform: translateY(-2px);
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
-  background: #0000ff;
+  background:rgb(4, 0, 219);
   color: #fff;
-  padding: 1.5rem;
+  padding: 2rem 0;
   text-align: center;
   margin-top: auto;
 }
 
-footer .social-links {
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffbf00;
+}
+
+.social-links {
   margin-top: 1rem;
 }
 
-footer .social-links a {
+.social-links a {
   color: #fff;
   margin: 0 0.5rem;
   font-size: 1.5rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-footer .social-links a:hover {
+.social-links a:hover {
   color: #ffbf00;
   transform: translateY(-2px);
 }

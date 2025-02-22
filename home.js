@@ -1,6 +1,6 @@
 // Hardcoded credentials
 const hardcodedUsers = [
-  { username: "BizLens", password: "@BizLens123#" },
+  { username: "TransparentTrack", password: "@TT123#" },
 ];
 
 // Login form submission

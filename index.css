@@ -170,11 +170,11 @@ nav ul li a.login-btn:hover {
   background: #1a9d00;
   transform: translateY(-2px);
 }
-
 /* Features Section */
 .features {
   padding: 3rem 0;
   background: #ffffff;
+  overflow: hidden; /* Prevent horizontal overflow */
 }
 
 .features h2 {
@@ -187,9 +187,10 @@ nav ul li a.login-btn:hover {
 
 .feature-cards {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: center; /* Center cards horizontally */
+  gap: 1.5rem; /* Space between cards */
+  padding: 0 1rem; /* Add padding to prevent overflow */
 }
 
 .card {
@@ -199,8 +200,9 @@ nav ul li a.login-btn:hover {
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex: 1 1 300px;
-  max-width: 100%;
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+  max-width: 100%; /* Ensure cards don't exceed container width */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .card:hover {
@@ -223,6 +225,20 @@ nav ul li a.login-btn:hover {
 .card p {
   font-size: 0.9rem;
   color: #666;
+}
+
+/* Responsive Design for Features Section */
+@media (max-width: 768px) {
+  .feature-cards {
+    flex-direction: column; /* Stack cards vertically on small screens */
+    align-items: center; /* Center cards horizontally */
+    gap: 1rem; /* Reduce gap between cards */
+  }
+
+  .card {
+    flex: 1 1 100%; /* Allow cards to take full width */
+    max-width: 90%; /* Limit card width for better readability */
+  }
 }
 
 /* About Section */

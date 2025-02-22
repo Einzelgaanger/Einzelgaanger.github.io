@@ -28,7 +28,6 @@ header {
   color: #fff;
   padding: 1rem;
   width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -114,7 +113,6 @@ header .header-subtitle {
 /* Features Section */
 .features {
   padding: 4rem 0;
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
   color: #fff;
 }
 
@@ -143,7 +141,7 @@ header .header-subtitle {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(101, 101, 101, 0.1);
 }
 
 .card i {
@@ -376,7 +374,7 @@ header .header-subtitle {
 
 /* Footer Styling */
 footer {
-  background:rgb(4, 0, 219);
+  background:rgb(53, 51, 51);
   color: #fff;
   padding: 2rem 0;
   text-align: center;

@@ -1,10 +1,29 @@
 /* General Styles */
-body {
-  font-family: 'Poppins', sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+  box-sizing: border-box;
+}
+
+/* Body with Background Image */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('assets/four.png') no-repeat center center/cover;
   color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Dark Overlay for Better Readability */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 /* Header Styles */
@@ -12,10 +31,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #0000ff,rgb(0, 185, 22));
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
   color: white;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.5s ease-in-out;
 }
 
 .header-left {
@@ -27,6 +50,7 @@ body {
   font-size: 2rem;
   font-weight: 650;
   margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header-subtitle {
@@ -78,21 +102,29 @@ body {
 /* Main Content Styles */
 .admin-main {
   padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Quick Actions Section Styles */
 .action-buttons-section {
-  background: linear-gradient(135deg, #0000ff, #1a73e8); /* Blue gradient */
-  color: #fff;
+  background: rgba(126, 126, 126, 0.95); /* Semi-transparent white */
+  color: #333;
   padding: 1.5rem 2rem;
   text-align: center;
+  border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-in-out;
 }
 
 .section-heading {
   margin: 0 0 1.5rem;
   font-size: 2rem;
-  color: white;
+  color: #0000ff; /* Blue */
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .action-buttons {
@@ -149,6 +181,27 @@ body {
 
 .fraud-alerts-btn i {
   color: #b50000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 /* Media Queries for Responsiveness */

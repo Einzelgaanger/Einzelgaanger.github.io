@@ -18,7 +18,7 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
 
   if (user) {
     // Redirect to index.html
-    window.location.href = "index.html";
+    window.location.href = "welcome.html";
   } else {
     // Show error message
     document.getElementById("error-message").style.display = "block";

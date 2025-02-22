@@ -20,7 +20,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #1a73e8, #1a9d00);
+  background: linear-gradient(135deg, #bb0000, #ffbf00);
 }
 
 /* Body Styling */
@@ -39,7 +39,7 @@ body {
 
 /* Header Styling */
 header {
-  background: linear-gradient(135deg, #0000ff, #1a73e8);
+  background: linear-gradient(135deg, #0000ff, #20cc00);
   color: #fff;
   padding: 2rem;
   width: 100%;

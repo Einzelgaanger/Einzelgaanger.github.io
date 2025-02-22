@@ -1,25 +1,20 @@
-/* admin.css */
-
 /* General Styles */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #f4f4f9;
+  color: #333;
 }
-
-
-
 
 /* Header Styles */
 .admin-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0004ff; /* Green */
+  background: linear-gradient(135deg, #0000ff, #20cc00);
   color: white;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -34,13 +29,28 @@ body {
   margin: 0;
 }
 
-header .header-subtitle {
+.header-subtitle {
   font-size: 1rem;
-  color: #cfcfcf;
+  color: #e0e0e0;
   margin-top: 0.5rem;
   font-weight: 500;
 }
+
 .header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
   display: flex;
   align-items: center;
 }
@@ -52,13 +62,13 @@ header .header-subtitle {
   text-decoration: none;
   padding: 0.5rem 1rem;
   border: none;
-  background-color: #000000; /* Blue */
+  background-color: #000000;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
 .logout-btn:hover {
-  background-color: #d61e46; /* Darker Blue */
+  background-color: #d61e46;
 }
 
 .logout-btn i {
@@ -72,8 +82,8 @@ header .header-subtitle {
 
 /* Quick Actions Section Styles */
 .action-buttons-section {
-  background-color:#0000ff;
-  padding: 5.7rem;
+  background: linear-gradient(135deg, #0000ff, #20cc00);
+  padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -81,11 +91,11 @@ header .header-subtitle {
 .section-heading {
   margin: 0 0 1.5rem;
   font-size: 2rem;
-  color: #000000;
+  color: white;
 }
 
 .action-buttons {
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
 }
@@ -95,17 +105,18 @@ header .header-subtitle {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: white;
   border: none;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .action-btn:hover {
-  background-color: #97895c;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .action-btn i {
@@ -115,28 +126,28 @@ header .header-subtitle {
 
 .action-btn span {
   font-size: 1.2rem;
-  color: #000000;
+  color: #333;
 }
 
 /* Unique Icon Colors */
 .manage-users-btn i {
-  color: #0000d7; /* Blue */
+  color: #0000d7;
 }
 
 .data-btn i {
-  color: #e36600; /* Yellow */
+  color: #e36600;
 }
 
 .funds-allocated-btn i {
-  color: #158c00; /* Green */
+  color: #158c00;
 }
 
 .goods-allocation-btn i {
-  color: #4f00c5; /* Blue */
+  color: #4f00c5;
 }
 
 .fraud-alerts-btn i {
-  color: #b50000; /* Yellow */
+  color: #b50000;
 }
 
 /* Media Queries for Responsiveness */
@@ -147,12 +158,24 @@ header .header-subtitle {
     padding: 1rem;
   }
 
-  .header-nav {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
     margin-top: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   .logout-btn {
     width: 100%;
+    margin-top: 0.5rem;
   }
 
   .admin-main {
@@ -161,5 +184,9 @@ header .header-subtitle {
 
   .action-buttons-section {
     padding: 1rem;
+  }
+
+  .action-buttons {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }

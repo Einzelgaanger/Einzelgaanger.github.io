@@ -20,7 +20,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #1a73e8, #1a9d00);
+  background: linear-gradient(135deg, #bb0000, #ffbf00);
 }
 
 body {
@@ -42,7 +42,7 @@ body {
 
 /* Header Styling */
 header {
-  background: linear-gradient(135deg, #0000ff, #1a73e8);
+  background: linear-gradient(135deg, #0000ff, #20cc00);
   color: #fff;
   padding: 2rem;
   width: 100%;
@@ -75,7 +75,7 @@ header .header-subtitle {
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-  background: linear-gradient(135deg, #0000ff, #1a73e8);
+  background: linear-gradient(135deg, #0000ff, #20cc00);
   padding: 2rem;
   position: relative;
   overflow: hidden;
@@ -166,7 +166,7 @@ header .header-subtitle {
 .error-message {
   font-size: 0.875rem;
   margin-top: 0.5rem;
-  color: red;
+  color: #bb0000;
   display: none;
 }
 
@@ -199,7 +199,7 @@ header .header-subtitle {
 
 /* Footer Styling */
 footer {
-  background: linear-gradient(135deg, #0000ff, #1a73e8);
+  background: linear-gradient(135deg, #0000ff, #20cc00);
   color: #fff;
   padding: 2rem;
   text-align: center;
@@ -219,7 +219,7 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-  color: #20cc00;
+  color: #ffbf00;
   transform: translateY(-2px);
 }
 

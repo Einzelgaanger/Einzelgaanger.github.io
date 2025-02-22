@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manage Disbursers</title>
-  <link rel="stylesheet" href="/manage-disbursers.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="manage-disbursers.css">
   <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
-
 <body>
   <header>
     <div class="header-left">
@@ -33,20 +31,22 @@
     <!-- List of Disbursers -->
     <div class="disbursers-list">
       <h2>Existing Disbursers</h2>
-      <table id="disbursers-table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Fingerprint</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Rows will be populated dynamically -->
-        </tbody>
-      </table>
+      <div class="table-container">
+        <table id="disbursers-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Fingerprint</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rows will be populated dynamically -->
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <!-- Popup Form for Adding New Disburser -->
@@ -90,7 +90,6 @@
     </div>
   </main>
 
-  <script src="/manage-disbursers.js"></script>
+  <script src="manage-disbursers.js"></script>
 </body>
-
 </html>

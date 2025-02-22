@@ -21,3 +21,25 @@ document.addEventListener('click', (event) => {
     contactPopup.classList.remove('active');
   }
 });
+
+// Form Submission
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const formData = new FormData(contactForm);
+  fetch('https://formspree.io/f/mvojnqkj', {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      alert('Message sent successfully!');
+      contactForm.reset();
+      toggleContactPopup();
+    } else {
+      alert('Oops! Something went wrong.');
+    }
+  });
+});

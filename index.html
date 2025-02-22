@@ -22,7 +22,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section id="hero" class="hero" style="background: url('assets/home.png') no-repeat center center/cover;">
     <div class="container">
       <div class="hero-content">
         <h2>Empowering Transparency in Resource Distribution</h2>
@@ -38,17 +38,23 @@
       <h2>Key Features</h2>
       <div class="feature-cards">
         <div class="card">
-          <i class="fas fa-shield-alt"></i>
+          <div class="image-placeholder">
+            <img src="images/secure-access.jpg" alt="Secure Access">
+          </div>
           <h3>Secure Access</h3>
           <p>Advanced encryption and secure authentication for your data.</p>
         </div>
         <div class="card">
-          <i class="fas fa-chart-line"></i>
+          <div class="image-placeholder">
+            <img src="images/real-time-analytics.jpg" alt="Real-Time Analytics">
+          </div>
           <h3>Real-Time Analytics</h3>
           <p>Track resource allocation and disbursement in real-time.</p>
         </div>
         <div class="card">
-          <i class="fas fa-users"></i>
+          <div class="image-placeholder">
+            <img src="images/user-management.jpg" alt="User Management">
+          </div>
           <h3>User Management</h3>
           <p>Easily manage roles and permissions for your team.</p>
         </div>
@@ -63,19 +69,55 @@
       <p>TransparentTrack is a cutting-edge platform designed to ensure transparency and accountability in resource allocation. Our mission is to empower organizations with the tools they need to manage resources effectively and ethically.</p>
       <div class="about-grid">
         <div class="about-item">
-          <i class="fas fa-globe"></i>
+          <div class="image-placeholder">
+            <img src="images/global-reach.jpg" alt="Global Reach">
+          </div>
           <h3>Global Reach</h3>
           <p>Supporting NGOs and governments worldwide.</p>
         </div>
         <div class="about-item">
-          <i class="fas fa-hand-holding-heart"></i>
+          <div class="image-placeholder">
+            <img src="images/community-focus.jpg" alt="Community Focus">
+          </div>
           <h3>Community Focus</h3>
           <p>Designed for rural and underserved communities.</p>
         </div>
         <div class="about-item">
-          <i class="fas fa-lock"></i>
+          <div class="image-placeholder">
+            <img src="images/secure-reliable.jpg" alt="Secure & Reliable">
+          </div>
           <h3>Secure & Reliable</h3>
           <p>Built with blockchain and biometric security.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2>Our Work in Action</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/gallery-1.jpg" alt="Resource Distribution">
+          <div class="image-description">
+            <h3>Resource Distribution</h3>
+            <p>Efficient and transparent distribution of resources to beneficiaries.</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery-2.jpg" alt="Biometric Verification">
+          <div class="image-description">
+            <h3>Biometric Verification</h3>
+            <p>Ensuring only registered beneficiaries receive resources.</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery-3.jpg" alt="Data Synchronization">
+          <div class="image-description">
+            <h3>Data Synchronization</h3>
+            <p>Real-time data upload to secure cloud servers.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -85,7 +127,7 @@
   <div class="contact-popup" id="contactPopup">
     <div class="contact-form">
       <h2>Contact us to get company credentials</h2>
-      <button class="close-btn" onclick="toggleContactPopup()" aria-label="Close contact form">&times;</button>
+      <button class="close-btn" onclick="toggleContactPopup()">&times;</button>
       <form id="contactForm" action="https://formspree.io/f/mvojnqkj" method="POST">
         <div class="form-group">
           <input type="text" name="name" placeholder="Your Name" required>
@@ -93,7 +135,7 @@
         <div class="form-group">
           <textarea name="message" placeholder="Your Message" required></textarea>
         </div>
-        <button type="submit" class="contact-btn" aria-label="Submit contact form">Send Message</button>
+        <button type="submit" class="contact-btn">Send Message</button>
       </form>
     </div>
   </div>
@@ -103,14 +145,29 @@
     <div class="container">
       <p>&copy; 2025 TransparentTrack. All rights reserved.</p>
       <div class="social-links">
-        <a href="https://web.facebook.com/abeautifulmind.ke/about" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://x.com/beautymindke" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/a-beautiful-mind-ab461a341/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://web.facebook.com/abeautifulmind.ke/about"><i class="fab fa-facebook"></i></a>
+        <a href="https://x.com/beautymindke"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/a-beautiful-mind-ab461a341/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
   </footer>
 
-  <!-- Link to External JavaScript -->
-  <script src="index.js"></script>
+  <!-- JavaScript -->
+  <script>
+    // Toggle Contact Popup
+    function toggleContactPopup() {
+      const popup = document.getElementById('contactPopup');
+      popup.classList.toggle('active');
+    }
+
+    // Close Popup on Click Outside
+    document.addEventListener('click', (event) => {
+      const popup = document.getElementById('contactPopup');
+      const contactForm = document.querySelector('.contact-form');
+      if (!contactForm.contains(event.target) && !event.target.matches('.cta-btn')) {
+        popup.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>

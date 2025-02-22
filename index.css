@@ -5,24 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Custom Scrollbar with Gradient */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f4f6f9;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #0000ff, #20cc00);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #1a73e8, #1a9d00);
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   background: #ffffff;
@@ -46,16 +28,14 @@ header {
   color: #fff;
   padding: 1rem;
   width: 100%;
-  text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
-  animation: slideDown 0.5s ease-in-out;
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 1px;
   margin: 0;
@@ -63,20 +43,28 @@ header h1 {
 }
 
 header .header-subtitle {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #e0e0e0;
   margin-top: 0.5rem;
   font-weight: 400;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /* Navigation */
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
-  flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -115,17 +103,6 @@ nav ul li a.login-btn:hover {
   overflow: hidden;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
-  animation: rotateGradient 10s linear infinite;
-}
-
 .hero-content {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 16px;
@@ -135,23 +112,20 @@ nav ul li a.login-btn:hover {
   width: 100%;
   text-align: center;
   backdrop-filter: blur(10px);
-  animation: fadeIn 1s ease-in-out;
   z-index: 1;
 }
 
 .hero h2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: #0000ff;
   font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #666;
   margin-bottom: 1.5rem;
-  font-weight: 400;
 }
 
 .hero .cta-btn {
@@ -170,16 +144,16 @@ nav ul li a.login-btn:hover {
   background: #1a9d00;
   transform: translateY(-2px);
 }
+
 /* Features Section */
 .features {
-  padding: 3rem 0;
+  padding: 2rem 0;
   background: #ffffff;
-  overflow: hidden; /* Prevent horizontal overflow */
 }
 
 .features h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-bottom: 1.5rem;
   color: #0000ff;
   font-weight: 700;
@@ -187,10 +161,9 @@ nav ul li a.login-btn:hover {
 
 .feature-cards {
   display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap to the next line */
-  justify-content: center; /* Center cards horizontally */
-  gap: 1.5rem; /* Space between cards */
-  padding: 0 1rem; /* Add padding to prevent overflow */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .card {
@@ -200,9 +173,8 @@ nav ul li a.login-btn:hover {
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
-  max-width: 100%; /* Ensure cards don't exceed container width */
-  box-sizing: border-box; /* Include padding in width calculation */
+  flex: 1 1 100%;
+  max-width: 100%;
 }
 
 .card:hover {
@@ -211,7 +183,7 @@ nav ul li a.login-btn:hover {
 }
 
 .card i {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #0000ff;
   margin-bottom: 1rem;
 }
@@ -227,29 +199,15 @@ nav ul li a.login-btn:hover {
   color: #666;
 }
 
-/* Responsive Design for Features Section */
-@media (max-width: 768px) {
-  .feature-cards {
-    flex-direction: column; /* Stack cards vertically on small screens */
-    align-items: center; /* Center cards horizontally */
-    gap: 1rem; /* Reduce gap between cards */
-  }
-
-  .card {
-    flex: 1 1 100%; /* Allow cards to take full width */
-    max-width: 90%; /* Limit card width for better readability */
-  }
-}
-
 /* About Section */
 .about {
-  padding: 3rem 0;
+  padding: 2rem 0;
   background: #f4f4f4;
 }
 
 .about h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-bottom: 1.5rem;
   color: #0000ff;
   font-weight: 700;
@@ -257,7 +215,7 @@ nav ul li a.login-btn:hover {
 
 .about p {
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #666;
   margin-bottom: 1.5rem;
 }
@@ -276,7 +234,7 @@ nav ul li a.login-btn:hover {
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex: 1 1 300px;
+  flex: 1 1 100%;
   max-width: 100%;
 }
 
@@ -286,7 +244,7 @@ nav ul li a.login-btn:hover {
 }
 
 .about-item i {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #0000ff;
   margin-bottom: 1rem;
 }
@@ -327,12 +285,11 @@ nav ul li a.login-btn:hover {
   max-width: 90%;
   width: 100%;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.5s ease-in-out;
 }
 
 .contact-popup h2 {
   text-align: center;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #0000ff;
   font-weight: 700;
@@ -351,14 +308,6 @@ nav ul li a.login-btn:hover {
   font-size: 1rem;
   background: #f9f9f9;
   color: #333;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-popup .form-group input:focus,
-.contact-popup .form-group textarea:focus {
-  border-color: #0000ff;
-  outline: none;
-  box-shadow: 0 0 8px rgba(0, 0, 255, 0.2);
 }
 
 .contact-popup .contact-btn {
@@ -384,7 +333,6 @@ footer {
   padding: 1.5rem;
   text-align: center;
   margin-top: auto;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 }
 
 footer .social-links {
@@ -419,52 +367,34 @@ footer .contact-btn:hover {
   transform: translateY(-2px);
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes rotateGradient {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 1.75rem;
+  .hamburger {
+    display: block;
   }
 
-  .hero-content {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: #0000ff;
     padding: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  nav ul.active {
+    display: flex;
   }
 
   .hero h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .hero p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .feature-cards,
@@ -477,14 +407,5 @@ footer .contact-btn:hover {
   .about-item {
     flex: 1 1 100%;
     max-width: 100%;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  nav ul li a.login-btn {
-    margin-top: 0.5rem;
   }
 }

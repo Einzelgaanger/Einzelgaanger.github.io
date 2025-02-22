@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goods Allocation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/goods-allocation.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <h1>Goods Allocation</h1>
+      <p class="header-subtitle">Manage Allocated Goods</p>
+    </div>
+    <nav>
+      <a href="admin.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Dashboard
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Add Goods Button -->
+    <button class="action-btn add-goods-btn" id="add-goods-btn">
+      <i class="fas fa-plus"></i> Add Goods
+    </button>
+
+    <!-- List of Goods -->
+    <div class="goods-list">
+      <h2>Allocated Goods</h2>
+      <table id="goods-table">
+        <thead>
+          <tr>
+            <th>Goods Name</th>
+            <th>Unit of Measurement</th>
+            <th>Pieces Remaining</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be populated dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Popup Form for Adding/Editing Goods -->
+    <div class="popup-overlay" id="popup-overlay">
+      <div class="popup-form">
+        <h2 id="popup-title">Add Goods</h2>
+        <form id="goods-form">
+          <div class="input-group">
+            <label for="goods-name">Goods Name:</label>
+            <input type="text" id="goods-name" name="goods-name" placeholder="Enter goods name" required>
+          </div>
+          <div class="input-group">
+            <label for="unit">Unit of Measurement:</label>
+            <input type="text" id="unit" name="unit" placeholder="Enter unit (e.g., Kg, Litres)" required>
+          </div>
+          <div class="input-group">
+            <label for="quantity">Pieces:</label>
+            <input type="number" id="quantity" name="quantity" placeholder="Enter available pieces" required>
+          </div>
+          <div class="form-buttons">
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-save"></i> Save
+            </button>
+            <button type="button" class="cancel-btn" id="cancel-btn">
+              <i class="fas fa-times"></i> Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="/goods-allocation.js"></script>
+</body>
+</html>

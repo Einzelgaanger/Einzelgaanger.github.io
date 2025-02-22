@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+  <!-- Header -->
+  <header class="admin-header">
+    <div class="header-left">
+      <h1 class="header-title">Admin Dashboard</h1>
+      <p class="header-subtitle">Manage Resources and Monitor Activities</p>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html" class="logout-btn" aria-label="Logout">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="admin-main">
+    <!-- Quick Actions Section -->
+    <section class="action-buttons-section" aria-labelledby="action-buttons-heading">
+      <h2 id="action-buttons-heading" class="section-heading">Quick Actions</h2>
+      <div class="action-buttons">
+        <div class="action-btn manage-users-btn" onclick="window.location.href='manage-disbursers.html'" aria-label="Manage Disbursers">
+          <i class="fas fa-users-cog"></i>
+          <span>Manage Disbursers</span>
+        </div>
+        <div class="action-btn data-btn" onclick="window.location.href='data.html'" aria-label="Beneficiaries Data">
+          <i class="fas fa-database"></i>
+          <span>Beneficiaries Data</span>
+        </div>
+        <div class="action-btn funds-allocated-btn" onclick="window.location.href='funds-allocated.html'" aria-label="Funds Allocated">
+          <i class="fas fa-coins"></i>
+          <span>Funds Allocated</span>
+        </div>
+        <div class="action-btn goods-allocation-btn" onclick="window.location.href='goods-allocation.html'" aria-label="Goods Allocation">
+          <i class="fas fa-box-open"></i>
+          <span>Goods Allocation</span>
+        </div>
+        <div class="action-btn fraud-alerts-btn" onclick="window.location.href='fraud-alerts.html'" aria-label="Fraud Alerts">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span>Fraud Alerts</span>
+        </div>
+      </div>
+    </section>
+
+
+  <script src="admin.js"></script>
+</body>
+</html>

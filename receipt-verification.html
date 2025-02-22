@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receipt Generation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/receipt-verification.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+  <header>
+    <h1>Receipt Generation</h1>
+    <p class="header-subtitle">Generate Receipts for Allocated Resources</p>
+    <nav>
+      <a href="disburser.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Dashboard
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="receipt-container">
+      <h2>Generate Receipt</h2>
+      <form id="receipt-form">
+        <!-- Beneficiary Name -->
+        <div class="input-group">
+          <label for="beneficiary-name">Beneficiary Name:</label>
+          <input type="text" id="beneficiary-name" name="beneficiary-name" placeholder="Enter beneficiary name" required>
+        </div>
+
+        <!-- Resources Allocated -->
+        <div class="input-group">
+          <label for="resource-type">Resources Allocated:</label>
+          <select id="resource-type" name="resource-type" required>
+            <option value="" disabled selected>Select resource type</option>
+            <!-- Options will be populated dynamically -->
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="print-receipt-btn">
+          <i class="fas fa-receipt"></i> Generate Receipt
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <script src="/receipt-verification.js"></script>
+</body>
+</html>

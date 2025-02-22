@@ -1,0 +1,318 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f6f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #0000ff, #20cc00);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #1a73e8, #1a9d00);
+}
+
+/* Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f4f6f9, #e0e7ff);
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(135deg, #0000ff, #1a73e8);
+  color: #fff;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.5s ease-in-out;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header .header-subtitle {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+
+/* Main Content Styling */
+main {
+  width: 100%;
+  max-width: 450px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 2rem;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #0000ff; /* Blue */
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Disburser Name Input */
+#disburser-name-group {
+  margin-bottom: 1.5rem;
+}
+
+#disburser-name-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+#disburser-name-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#disburser-name-group input:focus {
+  border-color: #0000ff; /* Blue */
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 0, 255, 0.2);
+}
+
+/* Role Selection */
+.role-selection {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.role-option {
+  flex: 1;
+  text-align: center;
+}
+
+.role-option input[type="radio"] {
+  display: none; /* Hide the default radio button */
+}
+
+.role-option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  background-color: #f4f4f9;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-option label i {
+  font-size: 1.5rem;
+  color: #0000ff; /* Blue */
+}
+
+.role-option input[type="radio"]:checked + label {
+  background: linear-gradient(135deg, #20cc00, #1a9d00);
+  color: #fff;
+  border-color: #20cc00;
+}
+
+.role-option input[type="radio"]:checked + label i {
+  color: #fff;
+}
+
+.role-option label:hover {
+  border-color: #0000ff; /* Blue */
+}
+
+/* Biometric Button */
+#biometric-btn {
+  background-color: transparent;
+  color: #333;
+  border: 2px solid #ffbf00; /* Yellow */
+  font-size: 1rem;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#biometric-btn i {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+#biometric-btn:hover {
+  background: linear-gradient(135deg, #ffbf00, #e6ac00);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 191, 0, 0.2);
+}
+
+/* Passkey Input Styling */
+.passkey-container {
+  position: relative;
+}
+
+#passkey {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#passkey:focus {
+  border-color: #0000ff; /* Blue */
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 0, 255, 0.2);
+}
+
+.passkey-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 1.2rem;
+}
+
+/* Error Message Styling */
+.error-message {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  color: #bb0000; /* Red */
+  display: none; /* Hidden by default */
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #20cc00, #1a9d00);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 128, 0, 0.2);
+}
+
+.login-btn i {
+  margin-right: 0.5rem;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #1a9d00, #148000);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 128, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .role-selection {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #disburser-name-group input {
+    font-size: 14px;
+  }
+}

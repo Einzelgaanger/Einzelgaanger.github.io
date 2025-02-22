@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TransparentTrack</title>
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <h1>TransparentTrack</h1>
+      <p class="header-subtitle">Ensuring Transparency in Resource Allocation</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="login-container">
+      <h2>Welcome Back!</h2>
+      <p class="subtitle">Please choose your role to continue</p>
+      <form id="login-form" class="login-form">
+        <!-- Role Selection -->
+        <div class="form-group">
+          <label for="role">Select Role:</label>
+          <div class="role-selection">
+            <div class="role-option">
+              <input type="radio" id="admin" name="role" value="admin" required>
+              <label for="admin">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin</span>
+              </label>
+            </div>
+            <div class="role-option">
+              <input type="radio" id="disburser" name="role" value="disburser" required>
+              <label for="disburser">
+                <i class="fas fa-hand-holding-usd"></i>
+                <span>Disburser</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Disburser Name Input (Visible only when Disburser is selected) -->
+        <div class="form-group" id="disburser-name-group" style="display: none;">
+          <label for="disburser-name">Disburser Name:</label>
+          <input type="text" id="disburser-name" name="disburser-name" placeholder="Enter your name">
+        </div>
+
+        <!-- Biometric Authentication -->
+        <div class="form-group">
+          <label for="biometric">Biometric Authentication:</label>
+          <button type="button" id="biometric-btn" class="biometric-btn">
+            <i class="fas fa-fingerprint"></i>
+            <span>Scan Fingerprint</span>
+          </button>
+        </div>
+
+        <!-- Passkey Entry -->
+        <div class="form-group">
+          <label for="passkey">Enter Passkey:</label>
+          <div class="passkey-container">
+            <input type="password" id="passkey" name="passkey" placeholder="Enter your passkey" required>
+            <i class="fas fa-key passkey-icon"></i>
+          </div>
+          <small id="passkey-error" class="error-message">Incorrect passkey. Please try again.</small>
+        </div>
+
+        <!-- Login Button -->
+        <button type="submit" id="login-btn" class="login-btn">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Login</span>
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <script src="/main.js"></script>
+</body>
+
+</html>

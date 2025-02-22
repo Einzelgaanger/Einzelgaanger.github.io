@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Disbursers</title>
+  <link rel="stylesheet" href="/manage-disbursers.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+  <header>
+    <div class="header-left">
+      <h1>Manage Disbursers</h1>
+      <p class="header-subtitle">Manage and Monitor Disburser Details</p>
+    </div>
+    <nav>
+      <a href="admin.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Dashboard
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Add New Disburser Button -->
+    <button class="action-btn add-disburser-btn" id="add-disburser-btn">
+      <i class="fas fa-user-plus"></i> Add New Disburser
+    </button>
+
+    <!-- List of Disbursers -->
+    <div class="disbursers-list">
+      <h2>Existing Disbursers</h2>
+      <table id="disbursers-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Fingerprint</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be populated dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Popup Form for Adding New Disburser -->
+    <div class="popup-overlay" id="popup-overlay">
+      <div class="popup-form">
+        <h2 id="popup-title">Add New Disburser</h2>
+        <form id="add-disburser-form">
+          <div class="input-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter disburser's full name" required>
+          </div>
+          <div class="input-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter disburser's email" required>
+          </div>
+          <div class="input-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter disburser's phone number" required>
+          </div>
+          <div class="input-group">
+            <label for="fingerprint">Fingerprint:</label>
+            <button type="button" id="scan-fingerprint-btn" class="scan-fingerprint-btn">
+              <i class="fas fa-fingerprint"></i> Scan Fingerprint
+            </button>
+            <input type="hidden" id="fingerprint" name="fingerprint">
+          </div>
+          <div class="input-group">
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Enter any additional notes"></textarea>
+          </div>
+          <div class="form-buttons">
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-save"></i> Save
+            </button>
+            <button type="button" class="cancel-btn" id="cancel-btn">
+              <i class="fas fa-times"></i> Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="/manage-disbursers.js"></script>
+</body>
+
+</html>

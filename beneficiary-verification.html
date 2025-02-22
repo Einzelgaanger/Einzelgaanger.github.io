@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beneficiary Verification</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/beneficiary-verification.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+  <header>
+    <h1>Beneficiary Verification</h1>
+    <p class="header-subtitle">Verify Beneficiary Details</p>
+  </header>
+
+  <main>
+    <div class="verification-container">
+      <h2>Verify Beneficiary</h2>
+      <form id="verification-form">
+        <div class="input-group">
+          <label for="biometric">Biometric Scan:</label>
+          <button type="button" id="biometric-scan-btn">
+            <i class="fas fa-fingerprint"></i> Scan Fingerprint
+          </button>
+        </div>
+
+        <div class="input-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter beneficiary name" required>
+        </div>
+
+        <button type="submit" id="verify-btn">
+          <i class="fas fa-check-circle"></i> Verify
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <script src="/beneficiary-verification.js"></script>
+</body>
+</html>

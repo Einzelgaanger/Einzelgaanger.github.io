@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fraud Alerts</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/fraud-alerts.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <h1>Fraud Alerts</h1>
+      <p class="header-subtitle">Detected Double Entries</p>
+    </div>
+    <nav>
+      <a href="admin.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Dashboard
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Fraud Alerts Table -->
+    <div class="fraud-alerts-container">
+      <h2>Detected Fraud Alerts</h2>
+      <table id="fraud-alerts-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Resource Type</th>
+            <th>Quantity</th>
+            <th>Time</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be populated dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="/fraud-alerts.js"></script>
+</body>
+</html>

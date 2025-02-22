@@ -1,0 +1,165 @@
+/* admin.css */
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+
+
+/* Header Styles */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0004ff; /* Green */
+  color: white;
+  padding: 2rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: 650;
+  margin: 0;
+}
+
+header .header-subtitle {
+  font-size: 1rem;
+  color: #cfcfcf;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #000000; /* Blue */
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #d61e46; /* Darker Blue */
+}
+
+.logout-btn i {
+  margin-right: 0.5rem;
+}
+
+/* Main Content Styles */
+.admin-main {
+  padding: 2rem;
+}
+
+/* Quick Actions Section Styles */
+.action-buttons-section {
+  background-color:#0000ff;
+  padding: 5.7rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-heading {
+  margin: 0 0 1.5rem;
+  font-size: 2rem;
+  color: #000000;
+}
+
+.action-buttons {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #97895c;
+}
+
+.action-btn i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.action-btn span {
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+/* Unique Icon Colors */
+.manage-users-btn i {
+  color: #0000d7; /* Blue */
+}
+
+.data-btn i {
+  color: #e36600; /* Yellow */
+}
+
+.funds-allocated-btn i {
+  color: #158c00; /* Green */
+}
+
+.goods-allocation-btn i {
+  color: #4f00c5; /* Blue */
+}
+
+.fraud-alerts-btn i {
+  color: #b50000; /* Yellow */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .header-nav {
+    margin-top: 1rem;
+  }
+
+  .logout-btn {
+    width: 100%;
+  }
+
+  .admin-main {
+    padding: 1rem;
+  }
+
+  .action-buttons-section {
+    padding: 1rem;
+  }
+}

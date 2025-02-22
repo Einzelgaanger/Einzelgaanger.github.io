@@ -12,3 +12,12 @@ function toggleContactPopup() {
   const contactPopup = document.getElementById('contactPopup');
   contactPopup.classList.toggle('active');
 }
+
+// Close Contact Popup when clicking outside
+document.addEventListener('click', (event) => {
+  const contactPopup = document.getElementById('contactPopup');
+  const contactForm = document.querySelector('.contact-form');
+  if (contactPopup.classList.contains('active') && !contactForm.contains(event.target) && !event.target.matches('.contact-btn')) {
+    contactPopup.classList.remove('active');
+  }
+});

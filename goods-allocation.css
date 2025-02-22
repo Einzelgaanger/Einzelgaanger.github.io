@@ -58,7 +58,7 @@ main {
 
 /* Add Goods Button */
 .add-goods-btn {
-  background-color:  #016f0e;
+  background-color: #016f0e; /* Green */
   color: #ffffff;
   padding: 10px 20px;
   border: none;
@@ -74,7 +74,7 @@ main {
 }
 
 .add-goods-btn:hover {
-  background: #20cc00; /* Darker green gradient */
+  background-color: #20cc00; /* Darker green */
   transform: translateY(-2px);
 }
 
@@ -105,17 +105,23 @@ th, td {
 }
 
 th {
-  background-color:rgb(54, 64, 54); /* Green */
+  background-color: rgb(54, 64, 54); /* Green */
   color: #ffffff;
   font-weight: 600;
 }
 
 td {
-  background-color:#fff;
+  background-color: #fff;
 }
 
 tr:hover {
   background-color: #f1f1f1;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 5px;
 }
 
 .edit-btn, .delete-btn {
@@ -127,7 +133,6 @@ tr:hover {
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
-  margin-right: 5px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -303,5 +308,15 @@ tr:hover {
   .submit-btn, .cancel-btn {
     padding: 0.5rem 1rem;
     font-size: 12px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .edit-btn, .delete-btn {
+    width: 100%;
+    text-align: center;
   }
 }

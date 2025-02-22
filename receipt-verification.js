@@ -104,9 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
             fraudEntries.push(receipt);
             localStorage.setItem('fraudEntries', JSON.stringify(fraudEntries));
 
-            // Show error message
+            // Show error message and wait for user to acknowledge
             alert(`${beneficiaryName} has already received funds within the last 5 minutes. Receipt cannot be generated.`);
-            return;
+            return; // Stop further execution
           }
 
           // Add the new receipt to the allocated funds array
@@ -119,10 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
           selectedGood.quantity -= 1; // Deduct 1 from the available quantity
           localStorage.setItem('goods', JSON.stringify(goods));
 
-          // Show success message
+          // Show success message and wait for user to acknowledge
           alert(`Receipt generated for ${beneficiaryName} for ${selectedGood.unit} ${selectedGood.name} at ${locationString}.`);
 
-          // Redirect or perform further actions here
+          // Redirect after the user acknowledges the success message
           window.location.href = "beneficiary-verification.html";
         } else {
           alert('Selected resource type not found in pre-registered goods.');

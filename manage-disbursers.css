@@ -18,9 +18,10 @@ body {
   line-height: 1.6;
 }
 
+
 /* Header Styling */
 header {
-  background-color: #0000ff;
+  background: linear-gradient(135deg, #0000ff, #1a73e8); /* Blue gradient */
   color: #fff;
   padding: 1.5rem 2rem;
   display: flex;
@@ -115,9 +116,9 @@ th, td {
 }
 
 th {
-  background-color: #f4f4f9;
+  background-color: rgb(54, 64, 54);
   font-weight: 600;
-  color: #333;
+  color: #ffffff;
 }
 
 td {

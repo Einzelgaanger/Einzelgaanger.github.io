@@ -15,8 +15,8 @@ body {
 
 /* Header Styling */
 header {
-  background-color: #0000ff; /* Blue */
-  color: #fff;
+  background: linear-gradient(135deg, #0000ff, #1a73e8); /* Blue gradient */
+  color: #ffffff;
   padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -26,16 +26,17 @@ header {
 
 header h1 {
   font-size: 2rem;
-  font-weight: 650;
+  font-weight: 700;
   margin: 0;
 }
 
 .header-subtitle {
   font-size: 1rem;
-  color: #cfcfcf;
+  color: #e0e0e0;
   margin-top: 0.5rem;
-  font-weight: 500;
+  font-weight: 400;
 }
+
 .back-link {
   color: #fff;
   text-decoration: none;
@@ -57,23 +58,23 @@ main {
 
 /* Add Goods Button */
 .add-goods-btn {
-  background-color: #0226c9; /* Green */
-  color: #fff;
+  background-color:  #016f0e;
+  color: #ffffff;
   padding: 10px 20px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 500;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   gap: 5px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .add-goods-btn:hover {
-  background-color: #3b42ff; /* Darker green */
+  background: #20cc00; /* Darker green gradient */
   transform: translateY(-2px);
 }
 
@@ -81,7 +82,7 @@ main {
 .goods-list {
   background-color: #fff;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -89,6 +90,7 @@ main {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   color: #0000ff; /* Blue */
+  font-weight: 700;
 }
 
 table {
@@ -101,15 +103,15 @@ th, td {
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
+
 th {
-  background-color: #1bac02; /* Green */
-  color: #000000;
+  background-color:rgb(54, 64, 54); /* Green */
+  color: #ffffff;
   font-weight: 600;
 }
 
-
 td {
-  background-color: #f9f9f9;
+  background-color:#fff;
 }
 
 tr:hover {
@@ -121,7 +123,7 @@ tr:hover {
   color: #fff;
   padding: 8px 12px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
@@ -130,7 +132,7 @@ tr:hover {
 }
 
 .edit-btn:hover {
-  background-color: #0000ff; /* Brighter blue */
+  background-color: #1a73e8; /* Brighter blue */
   transform: translateY(-2px);
 }
 
@@ -161,7 +163,7 @@ tr:hover {
 .popup-form {
   background-color: #fff;
   padding: 24px;
-  border-radius: 12px;
+  border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   width: 450px;
   max-width: 90%;
@@ -175,8 +177,8 @@ tr:hover {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   color: #0000ff; /* Blue */
+  font-weight: 700;
 }
-
 
 .input-group {
   margin-bottom: 1.5rem;
@@ -209,7 +211,7 @@ tr:hover {
 }
 
 .submit-btn {
-  background-color: #20cc00; /* Green */
+  background: linear-gradient(135deg, #20cc00, #1a9d00); /* Green gradient */
   color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -217,15 +219,15 @@ tr:hover {
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .submit-btn:hover {
-  background-color: #1da302; /* Darker green */
+  background: linear-gradient(135deg, #1a9d00, #148000); /* Darker green gradient */
 }
 
 .cancel-btn {
-  background-color: #b30202; /* Red */
+  background: linear-gradient(135deg, #bb0000, #ff0000); /* Red gradient */
   color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -233,11 +235,11 @@ tr:hover {
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .cancel-btn:hover {
-  background-color: #ff0000; /* Brighter red */
+  background: linear-gradient(135deg, #ff0000, #cc0000); /* Brighter red gradient */
 }
 
 /* Responsive Design */
@@ -256,5 +258,50 @@ tr:hover {
 
   .popup-form {
     width: 90%;
+  }
+
+  th, td {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .edit-btn, .delete-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.25rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .goods-list {
+    padding: 1rem;
+  }
+
+  .goods-list h2 {
+    font-size: 1.25rem;
+  }
+
+  .popup-form {
+    padding: 1rem;
+  }
+
+  .input-group input {
+    padding: 0.5rem;
+  }
+
+  .submit-btn, .cancel-btn {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
   }
 }

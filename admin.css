@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #0000ff, #20cc00);
+  background: linear-gradient(135deg, #0000ff,rgb(0, 185, 22));
   color: white;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -82,10 +82,11 @@ body {
 
 /* Quick Actions Section Styles */
 .action-buttons-section {
-  background: linear-gradient(135deg, #0000ff, #20cc00);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #0000ff, #1a73e8); /* Blue gradient */
+  color: #fff;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .section-heading {

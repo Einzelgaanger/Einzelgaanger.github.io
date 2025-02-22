@@ -25,8 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (name) {
       if (isNameValid(name)) {
-        alert("Beneficiary verified successfully! Proceeding...");
-        // Redirect to the receipt generation page with the beneficiary name as a URL parameter
+        // Redirect to the receipt generation page without showing an alert
         window.location.href = `receipt-verification.html?name=${encodeURIComponent(name)}`;
       } else {
         // Display error message if beneficiary is not found

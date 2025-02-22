@@ -9,17 +9,24 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f4f6f9;
-  color: #333;
+  color: #000000;
   line-height: 1.6;
 }
 
 /* Header Styling */
-header {
+.admin-header {
   background: linear-gradient(135deg, #0000ff, #1a73e8); /* Blue gradient */
   color: #fff;
   padding: 1.5rem 2rem;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
 }
 
 header h1 {
@@ -33,6 +40,25 @@ header h1 {
   color: #e0e0e0;
   margin-top: 0.5rem;
   font-weight: 400;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.back-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #ffbf00; /* Yellow */
 }
 
 /* Main Section */
@@ -70,8 +96,8 @@ th, td {
 }
 
 th {
-  background-color: #20cc00; /* Green */
-  color: #fff;
+  background-color: rgb(54, 64, 54); /* Green */
+  color: #ffffff;
   font-weight: 600;
 }
 

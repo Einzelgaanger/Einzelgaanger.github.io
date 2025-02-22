@@ -18,7 +18,7 @@
         <p class="header-subtitle">Ensuring Transparency in Resource Allocation</p>
       </div>
       <!-- Hamburger Menu for Mobile -->
-      <button class="hamburger" id="hamburger" title="Toggle navigation menu">
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
         <i class="fas fa-bars"></i>
       </button>
       <nav id="nav">
@@ -96,7 +96,7 @@
   <div class="contact-popup" id="contactPopup">
     <div class="contact-form">
       <h2>Contact Us</h2>
-      <button class="close-btn" onclick="toggleContactPopup()" title="Close contact form">&times;</button>
+      <button class="close-btn" onclick="toggleContactPopup()" aria-label="Close contact form">&times;</button>
       <form>
         <div class="form-group">
           <input type="text" placeholder="Your Name" required>
@@ -107,7 +107,7 @@
         <div class="form-group">
           <textarea placeholder="Your Message" required></textarea>
         </div>
-        <button type="submit" class="contact-btn" title="Submit contact form">Send Message</button>
+        <button type="submit" class="contact-btn" aria-label="Submit contact form">Send Message</button>
       </form>
     </div>
   </div>
@@ -121,26 +121,11 @@
         <a href="https://x.com/beautymindke" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
         <a href="https://www.linkedin.com/in/a-beautiful-mind-ab461a341/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
       </div>
-      <button class="contact-btn" onclick="toggleContactPopup()" title="Open contact form">Contact Us</button>
+      <button class="contact-btn" onclick="toggleContactPopup()" aria-label="Open contact form">Contact Us</button>
     </div>
   </footer>
 
-  <!-- JavaScript for Hamburger Menu and Contact Popup -->
-  <script>
-    // Hamburger Menu Toggle
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('nav');
-
-    hamburger.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      hamburger.classList.toggle('active');
-    });
-
-    // Contact Popup Toggle
-    function toggleContactPopup() {
-      const contactPopup = document.getElementById('contactPopup');
-      contactPopup.classList.toggle('active');
-    }
-  </script>
+  <!-- Link to External JavaScript -->
+  <script src="index.js"></script>
 </body>
 </html>

@@ -143,17 +143,35 @@ header .header-subtitle {
 
 .feature-cards {
   display: flex;
-  flex-direction: column;
+  overflow-x: auto; /* Enable horizontal scrolling */
   gap: 1rem;
+  padding-bottom: 1rem; /* Add space for scrollbar */
+  scroll-snap-type: x mandatory; /* Snap scrolling to cards */
+}
+
+.feature-cards::-webkit-scrollbar {
+  height: 8px; /* Scrollbar height */
+}
+
+.feature-cards::-webkit-scrollbar-thumb {
+  background: #0000ff; /* Scrollbar color */
+  border-radius: 4px;
+}
+
+.feature-cards::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /* Scrollbar track color */
 }
 
 .card {
+  flex: 0 0 auto; /* Prevent cards from shrinking */
+  width: 300px; /* Fixed width for each card */
   background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
   border: 1px solid #ddd;
   border-radius: 16px;
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start; /* Snap cards to the start */
 }
 
 .card:hover {
@@ -239,17 +257,22 @@ header .header-subtitle {
 
 .about-grid {
   display: flex;
-  flex-direction: column;
+  overflow-x: auto; /* Enable horizontal scrolling */
   gap: 1rem;
+  padding-bottom: 1rem; /* Add space for scrollbar */
+  scroll-snap-type: x mandatory; /* Snap scrolling to items */
 }
 
 .about-item {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  width: 300px; /* Fixed width for each item */
   background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
   border: 1px solid #ddd;
   border-radius: 16px;
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start; /* Snap items to the start */
 }
 
 .about-item:hover {
@@ -291,17 +314,22 @@ header .header-subtitle {
 
 .gallery-grid {
   display: flex;
-  flex-direction: column;
+  overflow-x: auto; /* Enable horizontal scrolling */
   gap: 1rem;
+  padding-bottom: 1rem; /* Add space for scrollbar */
+  scroll-snap-type: x mandatory; /* Snap scrolling to items */
 }
 
 .gallery-item {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  width: 300px; /* Fixed width for each item */
   background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
   border: 1px solid #ddd;
   border-radius: 16px;
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start; /* Snap items to the start */
 }
 
 .gallery-item:hover {

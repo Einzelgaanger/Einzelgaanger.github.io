@@ -5,10 +5,9 @@
   box-sizing: border-box;
 }
 
-/* Body with Full-Screen Background Image */
+/* Body Styling */
 body {
   font-family: 'Poppins', sans-serif;
-  background: url('assets/background.png') no-repeat center center/cover fixed; /* Full-screen background */
   color: #000000;
   line-height: 1.6;
   display: flex;
@@ -17,22 +16,42 @@ body {
   overflow-x: hidden;
 }
 
+/* Background Sections */
+.background-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.first-background {
+  background-image: url('assets/home.png'); /* First background image */
+}
+
+.second-background {
+  background-image: url('assets/two.png'); /* Second background image */
+}
+
 /* Dark Overlay for Better Readability */
-body::before {
+.background-section::before {
   content: '';
-  position: fixed; /* Fixed to cover the entire viewport */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-  z-index: -1; /* Behind the content */
+  z-index: 1; /* Behind the content */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay */
 }
 
 /* Header Styling */
@@ -97,14 +116,14 @@ header .header-subtitle {
 }
 
 .hero h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -119,6 +138,7 @@ header .header-subtitle {
   cursor: pointer;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.3s ease;
+  margin-bottom: 20px;
 }
 
 .hero .cta-btn:hover {
@@ -150,16 +170,16 @@ header .header-subtitle {
 }
 
 .feature-cards::-webkit-scrollbar {
-  height: 8px; /* Scrollbar height */
+  height: 6px; /* Scrollbar height */
 }
 
 .feature-cards::-webkit-scrollbar-thumb {
-  background: #0000ff; /* Scrollbar color */
+  background: #000000; /* Scrollbar color */
   border-radius: 4px;
 }
 
 .feature-cards::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1); /* Scrollbar track color */
+  background: rgba(255, 255, 255, 0.5); /* Scrollbar track color */
 }
 
 .card {
@@ -232,10 +252,54 @@ header .header-subtitle {
   color: #4b0082; /* Indigo */
 }
 
+/* Icon Colors */
+.icon-purple {
+  color: #800080; /* Purple */
+}
+
+.icon-orange {
+  color: #ffa500; /* Orange */
+}
+
+.icon-blue {
+  color: #0000ff; /* Blue */
+}
+
+.icon-green {
+  color: #008000; /* Green */
+}
+
+.icon-pink {
+  color: #ff1493; /* Pink */
+}
+
+.icon-red {
+  color: #ff0000; /* Red */
+}
+
+.icon-yellow {
+  color: #ffd700; /* Yellow */
+}
+
+.icon-teal {
+  color: #008080; /* Teal */
+}
+
+.icon-indigo {
+  color: #4b0082; /* Indigo */
+}
+
+.icon-violet {
+  color: #9400d3; /* Violet */
+}
+
+.icon-maroon {
+  color: #800000; /* Maroon */
+}
+
 /* About Section */
 .about {
   padding: 4rem 0;
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
   color: #fff;
 }
 
@@ -261,6 +325,19 @@ header .header-subtitle {
   gap: 1rem;
   padding-bottom: 1rem; /* Add space for scrollbar */
   scroll-snap-type: x mandatory; /* Snap scrolling to items */
+}
+
+.about-grid::-webkit-scrollbar {
+  height: 6px; /* Scrollbar height */
+}
+
+.about-grid::-webkit-scrollbar-thumb {
+  background: #000000; /* Scrollbar color */
+  border-radius: 4px;
+}
+
+.about-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.5); /* Scrollbar track color */
 }
 
 .about-item {
@@ -299,7 +376,6 @@ header .header-subtitle {
 /* Gallery Section */
 .gallery {
   padding: 4rem 0;
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
   color: #fff;
 }
 
@@ -307,7 +383,7 @@ header .header-subtitle {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #000000;
+  color: #fff;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -318,6 +394,19 @@ header .header-subtitle {
   gap: 1rem;
   padding-bottom: 1rem; /* Add space for scrollbar */
   scroll-snap-type: x mandatory; /* Snap scrolling to items */
+}
+
+.gallery-grid::-webkit-scrollbar {
+  height: 6px; /* Scrollbar height */
+}
+
+.gallery-grid::-webkit-scrollbar-thumb {
+  background: #000000; /* Scrollbar color */
+  border-radius: 4px;
+}
+
+.gallery-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.5); /* Scrollbar track color */
 }
 
 .gallery-item {

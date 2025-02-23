@@ -10,104 +10,150 @@
   <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="header-content">
-        <h1>TransparentTrack</h1>
-        <p class="header-subtitle">Ensuring Transparency in Resource Allocation</p>
+  <!-- First Background Image (Header + Hero) -->
+  <div class="background-section first-background">
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <h1>TransparentTrack</h1>
+          <p class="header-subtitle">Ensuring Transparency in Resource Allocation</p>
+        </div>
+        <a href="home.html" class="login-btn">Login</a>
       </div>
-      <a href="home.html" class="login-btn">Login</a>
-    </div>
-  </header>
+    </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero" style="background: url('assets/home.png') no-repeat center center/cover;">
-    <div class="container">
-      <h2>Empowering Transparency in Resource Distribution</h2>
-      <p>TransparentTrack is an offline-first, anti-corruption resource distribution app designed to ensure accountability and eliminate fraud in resource allocation. By leveraging biometric authentication and blockchain technology, we ensure that food and funds reach even the most vulnerable, phone-less beneficiaries in rural areas.</p>
-      <button class="cta-btn" onclick="toggleContactPopup()">Get Company Credentials</button>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features" class="features" style="background: url('assets/two.png') no-repeat center center/cover;">
-    <div class="container">
-      <h2>Key Features</h2>
-      <div class="feature-cards">
-        <div class="card">
-          <i class="fas fa-shield-alt icon-purple"></i>
-          <h3>Secure Access</h3>
-          <p>Advanced biometric authentication ensures that only authorized disbursers can access the app. Role-based permissions restrict access to sensitive operations, ensuring accountability at every level.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-chart-line icon-orange"></i>
-          <h3>Real-Time Analytics</h3>
-          <p>Track resource allocation and disbursement in real-time with detailed reports. Monitor discrepancies and ensure transparency across all transactions.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-users icon-blue"></i>
-          <h3>User Management</h3>
-          <p>Efficiently manage roles and permissions for disbursers, ensuring that only authorized personnel can initiate and approve transactions.</p>
-        </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <h2>Empowering Transparency in Resource Distribution</h2>
+        <p>TransparentTrack is an offline-first, anti-corruption resource distribution app designed to ensure accountability and eliminate fraud in resource allocation. By leveraging biometric authentication and blockchain technology, we ensure that food and funds reach even the most vulnerable, phone-less beneficiaries in rural areas.</p>
+        <button class="cta-btn" onclick="toggleContactPopup()">Get Company Credentials</button>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
-  <!-- About Section -->
-  <section id="about" class="about" style="background: url('assets/nine.png') no-repeat center center/cover;">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>TransparentTrack is a cutting-edge platform designed to revolutionize resource distribution in underserved regions. Our mission is to empower NGOs, governments, and donor organizations with the tools they need to ensure transparency, accountability, and efficiency in resource allocation.</p>
-      <div class="about-grid">
-        <div class="about-item">
-          <i class="fas fa-globe icon-green"></i>
-          <h3>Global Reach</h3>
-          <p>Supporting NGOs and governments worldwide in their efforts to combat corruption and ensure equitable resource distribution.</p>
-        </div>
-        <div class="about-item">
-          <i class="fas fa-hand-holding-heart icon-pink"></i>
-          <h3>Community Focus</h3>
-          <p>Designed specifically for rural and underserved communities, ensuring that even the most vulnerable populations receive the aid they need.</p>
-        </div>
-        <div class="about-item">
-          <i class="fas fa-lock icon-red"></i>
-          <h3>Secure & Reliable</h3>
-          <p>Built with blockchain and biometric security to prevent tampering and ensure the integrity of every transaction.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery Section -->
-  <section id="gallery" class="gallery" style="background: url('assets/three.png') no-repeat center center/cover;">
-    <div class="container">
-      <h2>Our Work in Action</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <i class="fas fa-box-open icon-yellow"></i>
-          <div class="image-description">
-            <h3>Resource Distribution</h3>
-            <p>Efficient and transparent distribution of resources to beneficiaries, ensuring that aid reaches those who need it most.</p>
+  <!-- Second Background Image (Features + About + Gallery + Footer) -->
+  <div class="background-section second-background">
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Key Features</h2>
+        <div class="feature-cards">
+          <div class="card">
+            <i class="fas fa-shield-alt icon-purple"></i>
+            <h3>Secure Access</h3>
+            <p>Advanced biometric authentication ensures that only authorized disbursers can access the app.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-chart-line icon-orange"></i>
+            <h3>Real-Time Analytics</h3>
+            <p>Track resource allocation and disbursement in real-time with detailed reports.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-users icon-blue"></i>
+            <h3>User Management</h3>
+            <p>Efficiently manage roles and permissions for disbursers.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-map-marker-alt icon-teal"></i>
+            <h3>GPS Tracking</h3>
+            <p>Every transaction is GPS-stamped to ensure resources are distributed in the correct location.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-print icon-indigo"></i>
+            <h3>Receipt Generation</h3>
+            <p>Generate QR-coded receipts for beneficiaries to verify their transactions.</p>
           </div>
         </div>
-        <div class="gallery-item">
-          <i class="fas fa-fingerprint icon-teal"></i>
-          <div class="image-description">
-            <h3>Biometric Verification</h3>
-            <p>Ensuring only registered beneficiaries receive resources through secure biometric authentication.</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <div class="about-grid">
+          <div class="about-item">
+            <i class="fas fa-globe icon-green"></i>
+            <h3>Global Reach</h3>
+            <p>Supporting NGOs and governments worldwide in their efforts to combat corruption.</p>
           </div>
-        </div>
-        <div class="gallery-item">
-          <i class="fas fa-cloud-upload-alt icon-indigo"></i>
-          <div class="image-description">
+          <div class="about-item">
+            <i class="fas fa-hand-holding-heart icon-pink"></i>
+            <h3>Community Focus</h3>
+            <p>Designed specifically for rural and underserved communities.</p>
+          </div>
+          <div class="about-item">
+            <i class="fas fa-lock icon-red"></i>
+            <h3>Secure & Reliable</h3>
+            <p>Built with blockchain and biometric security to prevent tampering.</p>
+          </div>
+          <div class="about-item">
+            <i class="fas fa-sync-alt icon-yellow"></i>
             <h3>Data Synchronization</h3>
-            <p>Real-time data upload to secure cloud servers, ensuring transparency and accountability in every transaction.</p>
+            <p>Automatically syncs transaction logs to secure cloud servers when back online.</p>
+          </div>
+          <div class="about-item">
+            <i class="fas fa-exclamation-triangle icon-blue"></i>
+            <h3>Fraud Detection</h3>
+            <p>AI-powered alerts flag suspicious patterns to prevent corruption.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2>Our Work in Action</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <i class="fas fa-box-open icon-yellow"></i>
+            <h3>Resource Distribution</h3>
+            <p>Efficient and transparent distribution of resources to beneficiaries.</p>
+          </div>
+          <div class="gallery-item">
+            <i class="fas fa-fingerprint icon-teal"></i>
+            <h3>Biometric Verification</h3>
+            <p>Ensuring only registered beneficiaries receive resources.</p>
+          </div>
+          <div class="gallery-item">
+            <i class="fas fa-cloud-upload-alt icon-indigo"></i>
+            <h3>Data Synchronization</h3>
+            <p>Real-time data upload to secure cloud servers.</p>
+          </div>
+          <div class="gallery-item">
+            <i class="fas fa-qrcode icon-purple"></i>
+            <h3>QR Receipts</h3>
+            <p>Beneficiaries receive QR-coded receipts for verification.</p>
+          </div>
+          <div class="gallery-item">
+            <i class="fas fa-shield-virus icon-orange"></i>
+            <h3>Anti-Corruption Safeguards</h3>
+            <p>AI-powered fraud detection ensures accountability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2025 TransparentTrack. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="https://www.instagram.com/_.m.averick?igsh=MXR5bG9oamFnMDJiaA==" target="_blank">Einzelgänger</a>
+          </div>
+          <div class="social-links">
+            <a href="https://web.facebook.com/abeautifulmind.ke/about" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/beautymindke" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/a-beautiful-mind-ab461a341/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 
   <!-- Contact Popup -->
   <div class="contact-popup" id="contactPopup">
@@ -115,25 +161,6 @@
       <h2>Send us a request email @binfred.ke@gmail.com to register your company.</h2>
     </div>
   </div>
-
-  <!-- Footer -->
-   <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="footer-content">
-      <p>&copy; 2025 TransparentTrack. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="https://www.instagram.com/_.m.averick?igsh=MXR5bG9oamFnMDJiaA==" target="_blank">Einzelgänger</a>
-       
-      </div>
-      <div class="social-links">
-        <a href="https://web.facebook.com/abeautifulmind.ke/about" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://x.com/beautymindke" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/a-beautiful-mind-ab461a341/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </div>
-  </div>
-</footer>
 
   <!-- JavaScript -->
   <script>

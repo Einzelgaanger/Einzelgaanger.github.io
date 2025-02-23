@@ -30,28 +30,28 @@ body {
   background-image: url('assets/home.png'); /* First background image */
 }
 
-.second-background {
-  background-image: url('assets/two.png'); /* Second background image */
-}
-
-/* Dark Overlay for Better Readability */
-.background-section::before {
-  content: '';
-  position: absolute;
+/* Static Background for Second Section */
+.static-background {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-  z-index: 1; /* Behind the content */
+  z-index: -1; /* Behind the content */
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+.static-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content Sections */
+.content-sections {
   position: relative;
-  z-index: 2; /* Ensure content is above the overlay */
+  z-index: 1; /* Above the static background */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  padding-top: 2rem; /* Add some spacing */
 }
 
 /* Header Styling */
@@ -138,7 +138,7 @@ header .header-subtitle {
   cursor: pointer;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.3s ease;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .hero .cta-btn:hover {
@@ -252,51 +252,6 @@ header .header-subtitle {
   color: #4b0082; /* Indigo */
 }
 
-/* Icon Colors */
-.icon-purple {
-  color: #800080; /* Purple */
-}
-
-.icon-orange {
-  color: #ffa500; /* Orange */
-}
-
-.icon-blue {
-  color: #0000ff; /* Blue */
-}
-
-.icon-green {
-  color: #008000; /* Green */
-}
-
-.icon-pink {
-  color: #ff1493; /* Pink */
-}
-
-.icon-red {
-  color: #ff0000; /* Red */
-}
-
-.icon-yellow {
-  color: #ffd700; /* Yellow */
-}
-
-.icon-teal {
-  color: #008080; /* Teal */
-}
-
-.icon-indigo {
-  color: #4b0082; /* Indigo */
-}
-
-.icon-violet {
-  color: #9400d3; /* Violet */
-}
-
-.icon-maroon {
-  color: #800000; /* Maroon */
-}
-
 /* About Section */
 .about {
   padding: 4rem 0;
@@ -310,13 +265,6 @@ header .header-subtitle {
   color: #fff;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.about p {
-  text-align: center;
-  font-size: 1rem;
-  color: #fff;
-  margin-bottom: 1.5rem;
 }
 
 .about-grid {
@@ -442,72 +390,6 @@ header .header-subtitle {
   color: #666;
 }
 
-/* Contact Popup */
-.contact-popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.contact-popup.active {
-  display: flex;
-}
-
-.contact-popup .contact-form {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 1.5rem;
-  max-width: 90%;
-  width: 100%;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.contact-popup h2 {
-  text-align: center;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: #000000;
-  font-weight: 700;
-}
-
-.contact-popup .form-group {
-  margin-bottom: 1rem;
-}
-
-.contact-popup .form-group input,
-.contact-popup .form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
-  background: #f9f9f9;
-  color: #333;
-}
-
-.contact-popup .contact-btn {
-  background: #20cc00;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.contact-popup .contact-btn:hover {
-  background: #1a9d00;
-  transform: translateY(-2px);
-}
-
 /* Footer Styling */
 footer {
   background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
@@ -555,4 +437,39 @@ footer {
 .social-links a:hover {
   color: #ffbf00;
   transform: translateY(-2px);
+}
+
+/* Contact Popup */
+.contact-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.contact-popup.active {
+  display: flex;
+}
+
+.contact-popup .contact-form {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  max-width: 90%;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.contact-popup h2 {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #000000;
+  font-weight: 700;
 }

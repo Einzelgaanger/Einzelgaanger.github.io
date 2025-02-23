@@ -22,24 +22,18 @@
       <h2>Welcome Back!</h2>
       <p class="subtitle">Please choose your role to continue</p>
       <form id="login-form" class="login-form">
-        <!-- Role Selection -->
+        <!-- Role Selection Toggle -->
         <div class="form-group">
           <label for="role">Select Role:</label>
-          <div class="role-selection">
-            <div class="role-option">
-              <input type="radio" id="admin" name="role" value="admin" required>
-              <label for="admin">
-                <i class="fas fa-user-shield"></i>
-                <span>Admin</span>
-              </label>
-            </div>
-            <div class="role-option">
-              <input type="radio" id="disburser" name="role" value="disburser" required>
-              <label for="disburser">
-                <i class="fas fa-hand-holding-usd"></i>
-                <span>Disburser</span>
-              </label>
-            </div>
+          <div class="role-toggle">
+            <input type="checkbox" id="role-toggle" class="toggle-checkbox">
+            <label for="role-toggle" class="toggle-label">
+              <div class="toggle-icons">
+                <i class="fas fa-user-shield admin-icon"></i>
+                <i class="fas fa-hand-holding-usd disburser-icon"></i>
+              </div>
+              <span class="toggle-switch"></span>
+            </label>
           </div>
         </div>
 
@@ -76,8 +70,6 @@
       </form>
     </div>
   </main>
-
-
 
   <script src="/main.js"></script>
 </body>

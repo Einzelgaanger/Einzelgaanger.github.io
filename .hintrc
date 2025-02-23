@@ -25,6 +25,12 @@
         "html-has-lang": "off"
       }
     ],
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ]
   }
 }

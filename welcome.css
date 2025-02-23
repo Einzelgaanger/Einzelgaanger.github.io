@@ -43,17 +43,102 @@ header {
   z-index: 1000;
   animation: slideDown 0.5s ease-in-out;
 }
+/* Role Toggle Styling */
+.role-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
 
+.toggle-checkbox {
+  display: none; /* Hide the default checkbox */
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color:rgb(0, 0, 0);
+  border: px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.toggle-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Ensure icons don't interfere with toggle */
+}
+
+.toggle-icons i {
+  font-size: 1.2rem;
+  color: #0000ff; /* Blue */
+  transition: color 0.3s ease;
+}
+
+.toggle-switch {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 36px;
+  height: 36px;
+  background-color:rgb(108, 103, 103);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Default state (Admin) */
+.toggle-checkbox:not(:checked) + .toggle-label {
+  background:  #20cc00); /* Green for Admin */
+  border-color: #20cc00;
+}
+
+.toggle-checkbox:not(:checked) + .toggle-label .admin-icon {
+  color: #000000; /* White for Admin icon */
+}
+
+.toggle-checkbox:not(:checked) + .toggle-label .disburser-icon {
+  color: #0000ff; /* Blue for Disburser icon */
+}
+
+/* Toggled state (Disburser) */
+.toggle-checkbox:checked + .toggle-label {
+  background: #000000; /* Blue for Disburser */
+  border-color: #0000ff;
+}
+
+.toggle-checkbox:checked + .toggle-label .disburser-icon {
+  color: #0000ff; /* White for Disburser icon */
+}
+
+.toggle-checkbox:checked + .toggle-label .admin-icon {
+  color: #20cc00; /* Blue for Admin icon */
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-switch {
+  transform: translateX(80px); /* Move switch to the right */
+}
 header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 1000;
   letter-spacing: 1px;
   margin: 0;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header .header-subtitle {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #e0e0e0;
   margin-top: 0.5rem;
   font-weight: 400;
@@ -75,7 +160,7 @@ main {
 
 h2 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
   color:rgb(0, 0, 205); /* Blue */
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -84,13 +169,13 @@ h2 {
 .subtitle {
   font-size: 1rem;
   color: #000000;
-  margin-bottom: 2rem;
   font-weight: 400;
+  margin-bottom: 0.2rem;
 }
 
 /* Form Group Styling */
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   text-align: left;
 }
 
@@ -103,7 +188,7 @@ h2 {
 
 /* Disburser Name Input */
 #disburser-name-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 #disburser-name-group label {

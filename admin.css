@@ -109,7 +109,7 @@ body::before {
 
 /* Quick Actions Section Styles */
 .action-buttons-section {
-  background: rgba(126, 126, 126, 0.95); /* Semi-transparent white */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
   color: #333;
   padding: 1.5rem 2rem;
   text-align: center;
